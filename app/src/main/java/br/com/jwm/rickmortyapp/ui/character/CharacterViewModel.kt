@@ -1,13 +1,13 @@
-package br.com.jwm.rickmortyapp.ui.notifications
+package br.com.jwm.rickmortyapp.ui.character
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class CharacterViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is character Fragment"
     }
     val text: LiveData<String> = _text
 }

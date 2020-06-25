@@ -3,26 +3,26 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/mobile_navigation"
-            app:startDestination="@+id/navigation_home">
+            app:startDestination="@+id/navigation_character">
 
     <fragment
-            android:id="@+id/navigation_home"
-            android:name="br.com.jwm.rickmortyapp.ui.home.HomeFragment"
-            android:label="@string/title_home"
-            tools:layout="@layout/fragment_home">
+            android:id="@+id/navigation_character"
+            android:name="br.com.jwm.rickmortyapp.ui.character.CharacterFragment"
+            android:label="@string/title_character"
+            tools:layout="@layout/fragment_character">
 
         <action
                 android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-                app:destination="@id/navigation_home_second"/>
+                app:destination="@id/navigation_character_details"/>
     </fragment>
     <fragment
-            android:id="@+id/navigation_home_second"
-            android:name="br.com.jwm.rickmortyapp.ui.home.HomeSecondFragment"
-            android:label="@string/home_second"
-            tools:layout="@layout/fragment_home_second">
+            android:id="@+id/navigation_character_details"
+            android:name="br.com.jwm.rickmortyapp.ui.character.CharacterDetailsFragment"
+            android:label="@string/character_details"
+            tools:layout="@layout/fragment_character_details">
         <action
-                android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-                app:destination="@id/navigation_home"/>
+                android:id="@+id/action_CharacterDetailsFragment_to_CharacterFragment"
+                app:destination="@id/navigation_character"/>
 
         <argument
                 android:name="myArg"
@@ -30,14 +30,14 @@
     </fragment>
 
     <fragment
-            android:id="@+id/navigation_dashboard"
-            android:name="br.com.jwm.rickmortyapp.ui.dashboard.DashboardFragment"
-            android:label="@string/title_dashboard"
-            tools:layout="@layout/fragment_dashboard"/>
+            android:id="@+id/navigation_location"
+            android:name="br.com.jwm.rickmortyapp.ui.location.LocationFragment"
+            android:label="@string/title_location"
+            tools:layout="@layout/fragment_location"/>
 
     <fragment
-            android:id="@+id/navigation_notifications"
-            android:name="br.com.jwm.rickmortyapp.ui.notifications.NotificationsFragment"
-            android:label="@string/title_notifications"
-            tools:layout="@layout/fragment_notifications"/>
+            android:id="@+id/navigation_episode"
+            android:name="br.com.jwm.rickmortyapp.ui.episode.EpisodeFragment"
+            android:label="@string/title_episode"
+            tools:layout="@layout/fragment_episode"/>
 </navigation>

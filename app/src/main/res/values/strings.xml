@@ -2,12 +2,12 @@
     <string name="app_name">RickMortyApp</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="hello_dashboard_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="hello_notifications_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="hello_character_details">Hello CharacterDetailsFragment. Arg: %1$s</string>
 
-    <string name="home_second">Home Second</string>
+    <string name="title_character">Character</string>
+    <string name="title_location">Location</string>
+    <string name="title_episode">Episode</string>
+
+    <string name="character_details">Character Details</string>
+    <string name="action_filters">Filters</string>
 </resources>
