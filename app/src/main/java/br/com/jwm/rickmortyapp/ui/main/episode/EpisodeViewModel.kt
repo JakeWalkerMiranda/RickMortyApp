@@ -1,4 +1,4 @@
-package br.com.jwm.rickmortyapp.ui.episode
+package br.com.jwm.rickmortyapp.ui.main.episode
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

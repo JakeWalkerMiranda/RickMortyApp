@@ -1,4 +1,4 @@
-package br.com.jwm.rickmortyapp.ui.location
+package br.com.jwm.rickmortyapp.ui.main.location
 
 import android.os.Bundle
 import android.view.LayoutInflater

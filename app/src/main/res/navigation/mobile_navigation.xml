@@ -7,7 +7,7 @@
 
     <fragment
             android:id="@+id/navigation_character"
-            android:name="br.com.jwm.rickmortyapp.ui.character.CharacterFragment"
+            android:name="br.com.jwm.rickmortyapp.ui.main.character.CharacterFragment"
             android:label="@string/title_character"
             tools:layout="@layout/fragment_character">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
             android:id="@+id/navigation_character_details"
-            android:name="br.com.jwm.rickmortyapp.ui.character.CharacterDetailsFragment"
+            android:name="br.com.jwm.rickmortyapp.ui.main.character.CharacterDetailsFragment"
             android:label="@string/character_details"
             tools:layout="@layout/fragment_character_details">
         <action
@@ -31,13 +31,13 @@
 
     <fragment
             android:id="@+id/navigation_location"
-            android:name="br.com.jwm.rickmortyapp.ui.location.LocationFragment"
+            android:name="br.com.jwm.rickmortyapp.ui.main.location.LocationFragment"
             android:label="@string/title_location"
             tools:layout="@layout/fragment_location"/>
 
     <fragment
             android:id="@+id/navigation_episode"
-            android:name="br.com.jwm.rickmortyapp.ui.episode.EpisodeFragment"
+            android:name="br.com.jwm.rickmortyapp.ui.main.episode.EpisodeFragment"
             android:label="@string/title_episode"
             tools:layout="@layout/fragment_episode"/>
 </navigation>

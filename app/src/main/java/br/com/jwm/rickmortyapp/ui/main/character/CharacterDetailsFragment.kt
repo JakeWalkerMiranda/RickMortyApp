@@ -1,4 +1,4 @@
-package br.com.jwm.rickmortyapp.ui.character
+package br.com.jwm.rickmortyapp.ui.main.character
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,11 +17,7 @@ class CharacterDetailsFragment : Fragment() {
 
     private val args: CharacterDetailsFragmentArgs by navArgs()
 
-    override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_character_details, container, false)
     }
 

@@ -1,6 +1,5 @@
-package br.com.jwm.rickmortyapp
+package br.com.jwm.rickmortyapp.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -12,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import br.com.jwm.rickmortyapp.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,7 +29,10 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_character, R.id.navigation_location, R.id.navigation_episode))
+            R.id.navigation_character,
+            R.id.navigation_location,
+            R.id.navigation_episode
+        ))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
