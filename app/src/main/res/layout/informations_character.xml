@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    tools:ignore="RtlSymmetry">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informations"
+        android:textSize="20sp"
+        android:textColor="#8E8E93"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#081F32"
+        android:layout_marginTop="19dp"/>
+
+    <TextView
+        android:id="@+id/txtCharacterDetailsGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#6E798C"
+        tools:text="Male"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#0C000000"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Origin"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#081F32"
+        android:layout_marginTop="9dp"/>
+
+    <TextView
+        android:id="@+id/txtCharacterDetailsOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#6E798C"
+        tools:text="Earth (C-137)"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#0C000000"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#081F32"
+        android:layout_marginTop="9dp"/>
+
+    <TextView
+        android:id="@+id/txtCharacterDetailsType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#6E798C"
+        tools:text="Unknown"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#0C000000"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#081F32"
+        android:layout_marginTop="9dp"/>
+
+    <TextView
+        android:id="@+id/txtCharacterDetailsLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#6E798C"
+        tools:text="Earth (Replacement Dimension)"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#0C000000"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Episodes"
+        android:textSize="20sp"
+        android:textColor="#8E8E93"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

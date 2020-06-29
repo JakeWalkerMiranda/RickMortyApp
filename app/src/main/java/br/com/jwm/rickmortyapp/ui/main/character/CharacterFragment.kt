@@ -11,14 +11,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.jwm.rickmortyapp.R
 import br.com.jwm.rickmortyapp.data.api.ApiHelper
 import br.com.jwm.rickmortyapp.data.api.RetrofitBuilder
 import br.com.jwm.rickmortyapp.data.model.Character
-import br.com.jwm.rickmortyapp.data.model.CharacterList
+import br.com.jwm.rickmortyapp.data.model.CharacterDetails
+import br.com.jwm.rickmortyapp.extensions.navigateWithAnimations
 import br.com.jwm.rickmortyapp.ui.base.SharedViewModel
 import br.com.jwm.rickmortyapp.ui.base.ViewModelFactory
 import br.com.jwm.rickmortyapp.ui.main.adapter.CharacterAdapter
@@ -26,9 +26,10 @@ import br.com.jwm.rickmortyapp.utils.Status
 import kotlinx.android.synthetic.main.fragment_character.*
 
 
-class CharacterFragment : Fragment() {
+class CharacterFragment : Fragment(), CharacterAdapter.OnClickListener{
 
     private lateinit var adapter: CharacterAdapter
+
 
     // ViewModels
     private lateinit var characterViewModel: CharacterViewModel
@@ -53,17 +54,10 @@ class CharacterFragment : Fragment() {
         ).get(CharacterViewModel::class.java)
     }
 
-
     // Atualizar UI
     private fun setupUI() {
         recyclerView.layoutManager = GridLayoutManager(context, 2)
-        adapter = CharacterAdapter(arrayListOf())
-        recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                recyclerView.context,
-                (recyclerView.layoutManager as GridLayoutManager).orientation
-            )
-        )
+        adapter = CharacterAdapter(arrayListOf(), this)
         recyclerView.adapter = adapter
     }
 
@@ -100,5 +94,12 @@ class CharacterFragment : Fragment() {
             addCharacters(characters)
             notifyDataSetChanged()
         }
+    }
+
+    override fun onItemClick(character: Character, position: Int) {
+        model.selectCharacter(character)
+
+        //Navegação
+        findNavController().navigateWithAnimations(R.id.action_CharacterFragment_to_CharacterDetailsFragment)
     }
 }

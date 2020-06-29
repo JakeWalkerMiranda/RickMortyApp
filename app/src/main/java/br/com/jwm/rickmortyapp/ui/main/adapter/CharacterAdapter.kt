@@ -10,21 +10,22 @@ import androidx.core.text.parseAsHtml
 import androidx.recyclerview.widget.RecyclerView
 import br.com.jwm.rickmortyapp.R
 import br.com.jwm.rickmortyapp.data.model.Character
+import br.com.jwm.rickmortyapp.data.model.CharacterDetails
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import kotlinx.android.synthetic.main.cardview_item_character.view.*
 
 
-class CharacterAdapter(private val characters: ArrayList<Character>) :
+class CharacterAdapter(private val characters: ArrayList<Character>,
+                       private val listener: OnClickListener) :
     RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(characters: Character) {
             itemView.apply {
                 txtCharacterName.text = characters.name
                 txtCharacterStatus.text = characters.status
-
 
                 val x = Uri.parse(characters.image)
                 Glide.with(this)
@@ -44,7 +45,12 @@ class CharacterAdapter(private val characters: ArrayList<Character>) :
                         }
                     })
             }
+
+            itemView.setOnClickListener {
+                listener.onItemClick(characters, adapterPosition)
+            }
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
@@ -62,5 +68,9 @@ class CharacterAdapter(private val characters: ArrayList<Character>) :
             clear()
             addAll(characters)
         }
+    }
+
+    interface OnClickListener {
+        fun onItemClick(details: Character, position: Int)
     }
 }

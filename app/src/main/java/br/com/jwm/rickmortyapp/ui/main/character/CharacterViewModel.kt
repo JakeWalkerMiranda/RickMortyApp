@@ -11,11 +11,6 @@ import java.lang.Exception
 
 class CharacterViewModel(private val mainRepository: MainRepository) : ViewModel() {
 
-//    private val _text = MutableLiveData<String>().apply {
-//        value = "This is character Fragment"
-//    }
-//    val text: LiveData<String> = _text
-
     fun getCharacters() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {

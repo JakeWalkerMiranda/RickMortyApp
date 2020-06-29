@@ -12,7 +12,7 @@
             tools:layout="@layout/fragment_character">
 
         <action
-                android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+                android:id="@+id/action_CharacterFragment_to_CharacterDetailsFragment"
                 app:destination="@id/navigation_character_details"/>
     </fragment>
     <fragment
